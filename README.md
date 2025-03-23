@@ -20,8 +20,20 @@ PPYDFS consists of three main components:
 
 ## Installation
 
+### Install from PyPI
+
 ```bash
+pip install pywebio
+pip install ppydfs
+```
+
+### Run from Code
+
+```bash
+git clone https://github.com/EasyCam/PPYDFS.git
+cd PPYDFS
 pip install -r requirements.txt
+pip install .
 ```
 
 ## Usage
