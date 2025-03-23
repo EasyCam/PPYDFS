@@ -110,3 +110,10 @@ Default settings:
 ## License
 
 GPLv3
+
+## Screenshots
+
+![](./images/webui_en.png)
+
+![](./images/webui_cn.png)
+

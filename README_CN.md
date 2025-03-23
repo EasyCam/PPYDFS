@@ -109,3 +109,9 @@ Web界面提供：
 ## 许可证
 
 GPLv3
+
+## 截图
+
+![](./images/webui_en.png)
+
+![](./images/webui_cn.png)
