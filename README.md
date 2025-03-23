@@ -1,6 +1,6 @@
-# PYDFS - Python Distributed File System
+# PPYDFS - Python Distributed File System
 
-PYDFS is a lightweight distributed file system implemented in Python. It provides a reliable way to store and access files across multiple server nodes with automatic replication and failure recovery.
+PPYDFS is a lightweight distributed file system implemented in Python. It provides a reliable way to store and access files across multiple server nodes with automatic replication and failure recovery.
 
 ## Features
 
@@ -12,7 +12,7 @@ PYDFS is a lightweight distributed file system implemented in Python. It provide
 
 ## Architecture
 
-PYDFS consists of three main components:
+PPYDFS consists of three main components:
 
 1. **Name Server**: Manages file metadata and coordinates data servers
 2. **Data Servers**: Store the actual file blocks with replication
@@ -29,13 +29,13 @@ pip install -r requirements.txt
 ### Starting a Name Server
 
 ```bash
-python -m pydfs nameserver [web_port]
+python -m ppydfs nameserver [web_port]
 ```
 
 Example:
 
 ```bash
-python -m pydfs nameserver 8080
+python -m ppydfs nameserver 8080
 ```
 
 This starts a name server with a web monitoring interface accessible at http://localhost:8080.
@@ -43,12 +43,12 @@ This starts a name server with a web monitoring interface accessible at http://l
 ### Starting a Data Server
 
 ```bash
-python -m pydfs dataserver [host] [port] [storage_dir] [name_server]
+python -m ppydfs dataserver [host] [port] [storage_dir] [name_server]
 ```
 
 Example:
 ```bash
-python -m pydfs dataserver localhost 9001 ./storage localhost:9000
+python -m ppydfs dataserver localhost 9001 ./storage localhost:9000
 ```
 
 ### Client Operations
@@ -56,25 +56,25 @@ python -m pydfs dataserver localhost 9001 ./storage localhost:9000
 #### Upload a file
 
 ```bash
-python -m pydfs client upload myfile.txt [remote_name]
+python -m ppydfs client upload myfile.txt [remote_name]
 ```
 
 #### Download a file
 
 ```bash
-python -m pydfs client download remote_file [local_path]
+python -m ppydfs client download remote_file [local_path]
 ```
 
 #### List all files
 
 ```bash
-python -m pydfs client list
+python -m ppydfs client list
 ```
 
 #### Delete a file
 
 ```bash
-python -m pydfs client delete remote_file
+python -m ppydfs client delete remote_file
 ```
 
 ## Web Interface

@@ -1,37 +1,37 @@
 """
-Python Distributed File System (PYDFS) - Command Line Interface
+Python Distributed File System (PPYDFS) - Command Line Interface
 
-This module allows running PYDFS components directly:
-    python -m pydfs nameserver [web_port]
-    python -m pydfs dataserver [host] [port] [storage_dir] [name_server]
+This module allows running PPYDFS components directly:
+    python -m ppydfs nameserver [web_port]
+    python -m ppydfs dataserver [host] [port] [storage_dir] [name_server]
 """
 
 import sys
 import os
 import time
-# Fix the import to use the Client class directly from pydfs module
-from pydfs import start_name_server, start_data_server, Client
+# Fix the import to use the Client class directly from ppydfs module
+from ppydfs import start_name_server, start_data_server, Client
 
 # rest of the file remains unchanged
 
 def print_usage():
     """Print usage instructions"""
-    print("Python Distributed File System (PYDFS)")
+    print("Python Distributed File System (PPYDFS)")
     print("\nUsage:")
-    print("  python -m pydfs nameserver [web_port]")
-    print("  python -m pydfs dataserver [host] [port] [storage_dir] [name_server]")
-    print("  python -m pydfs client <command> [options]")
+    print("  python -m ppydfs nameserver [web_port]")
+    print("  python -m ppydfs dataserver [host] [port] [storage_dir] [name_server]")
+    print("  python -m ppydfs client <command> [options]")
     print("\nExamples:")
-    print("  python -m pydfs nameserver 8080")
-    print("  python -m pydfs dataserver localhost 9001 ./storage localhost:9000")
-    print("  python -m pydfs client upload myfile.txt")
+    print("  python -m ppydfs nameserver 8080")
+    print("  python -m ppydfs dataserver localhost 9001 ./storage localhost:9000")
+    print("  python -m ppydfs client upload myfile.txt")
     print("\nCommands:")
     print("  nameserver  - Start a name server with web monitoring interface")
     print("  dataserver  - Start a data server node")
     print("  client      - Execute client operations (upload, download, list, delete)")
 
 def main():
-    """Main entry point for the PYDFS command line interface"""
+    """Main entry point for the PPYDFS command line interface"""
     if len(sys.argv) < 2:
         print_usage()
         sys.exit(1)
@@ -76,10 +76,10 @@ def main():
         # Client operations
         if len(sys.argv) < 3:
             print("Client usage:")
-            print("  python -m pydfs client upload <local_file> [remote_name]")
-            print("  python -m pydfs client download <remote_file> [local_path]")
-            print("  python -m pydfs client list")
-            print("  python -m pydfs client delete <remote_file>")
+            print("  python -m ppydfs client upload <local_file> [remote_name]")
+            print("  python -m ppydfs client download <remote_file> [local_path]")
+            print("  python -m ppydfs client list")
+            print("  python -m ppydfs client delete <remote_file>")
             sys.exit(1)
         
         name_server = 'localhost:9000'
@@ -96,7 +96,7 @@ def main():
             local_path = sys.argv[3]
             remote_name = sys.argv[4] if len(sys.argv) > 4 else None
             
-            print(f"Uploading {local_path} to PYDFS...")
+            print(f"Uploading {local_path} to PPYDFS...")
             if client.upload_file(local_path, remote_name):
                 print("Upload successful")
             else:
@@ -110,14 +110,14 @@ def main():
             remote_file = sys.argv[3]
             local_path = sys.argv[4] if len(sys.argv) > 4 else remote_file
             
-            print(f"Downloading {remote_file} from PYDFS...")
+            print(f"Downloading {remote_file} from PPYDFS...")
             if client.download_file(remote_file, local_path):
                 print(f"Download successful: {local_path}")
             else:
                 print("Download failed")
                 
         elif sys.argv[2] == 'list':
-            print("Files in PYDFS:")
+            print("Files in PPYDFS:")
             files = client.list_files()
             if files:
                 for file in files:

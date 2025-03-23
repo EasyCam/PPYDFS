@@ -11,13 +11,13 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 README = open(os.path.join(here, 'README.md')).read()
 
-setup(name='pydfs',
+setup(name='ppydfs',
       version=version,
-      description='Python Distributed File System (PYDFS)',
+      description='Python Distributed File System (PPYDFS)',
       author='cycleuser',
       author_email='cycleuser@cycleuser.org',
       url='http://blog.cycleuser.org',
-      packages=['pydfs'],
+      packages=['ppydfs'],
       install_requires=[ 
                         "pywebio",
                          ],
