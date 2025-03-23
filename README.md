@@ -1,6 +1,6 @@
-# PPYDFS - Python Distributed File System
+# PPYDFS - Python Parallel Distributed File System
 
-PPYDFS is a lightweight distributed file system implemented in Python. It provides a reliable way to store and access files across multiple server nodes with automatic replication and failure recovery.
+PPYDFS is a lightweight parallel distributed file system implemented in Python. It provides a reliable way to store and access files across multiple server nodes with automatic replication and failure recovery.
 
 ## Features
 

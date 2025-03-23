@@ -1,5 +1,5 @@
 """
-Python Distributed File System (PPYDFS) - Command Line Interface
+Python Parallel Distributed File System (PPYDFS) - Command Line Interface
 
 This module allows running PPYDFS components directly:
     python -m ppydfs nameserver [web_port]
@@ -16,7 +16,7 @@ from ppydfs import start_name_server, start_data_server, Client
 
 def print_usage():
     """Print usage instructions"""
-    print("Python Distributed File System (PPYDFS)")
+    print("Python Parallel Distributed File System (PPYDFS)")
     print("\nUsage:")
     print("  python -m ppydfs nameserver [web_port]")
     print("  python -m ppydfs dataserver [host] [port] [storage_dir] [name_server]")

@@ -13,7 +13,7 @@ README = open(os.path.join(here, 'README.md')).read()
 
 setup(name='ppydfs',
       version=version,
-      description='Python Distributed File System (PPYDFS)',
+      description='Python Parallel Distributed File System (PPYDFS)',
       author='cycleuser',
       author_email='cycleuser@cycleuser.org',
       url='http://blog.cycleuser.org',

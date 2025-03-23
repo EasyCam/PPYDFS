@@ -528,7 +528,7 @@ class Client:
         self.name_server_addr = name_server_addr
     
     def upload_file(self, local_path, remote_filename):
-        """Upload a file to the distributed file system | 将文件上传到分布式文件系统"""
+        """Upload a file to the parallel distributed file system | 将文件上传到分布式文件系统"""
         if not os.path.exists(local_path):
             print(f"Error: Local file {local_path} does not exist")
             return False
@@ -577,7 +577,7 @@ class Client:
             return False
     
     def download_file(self, remote_filename, local_path):
-        """Download a file from the distributed file system | 从分布式文件系统下载文件"""
+        """Download a file from the parallel distributed file system | 从分布式文件系统下载文件"""
         try:
             # Get file metadata | 获取文件元数据
             response = self._name_server_request({
@@ -620,7 +620,7 @@ class Client:
             return False
     
     def list_files(self):
-        """List all files in the distributed file system | 列出分布式文件系统中的所有文件"""
+        """List all files in the parallel distributed file system | 列出分布式文件系统中的所有文件"""
         try:
             response = self._name_server_request({
                 'command': 'list_files'
@@ -637,7 +637,7 @@ class Client:
             return []
     
     def delete_file(self, remote_filename):
-        """Delete a file from the distributed file system | 从分布式文件系统删除文件"""
+        """Delete a file from the parallel distributed file system | 从分布式文件系统删除文件"""
         try:
             response = self._name_server_request({
                 'command': 'delete_file',
