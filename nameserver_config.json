@@ -1,0 +1,27 @@
+{
+  "host": "0.0.0.0",
+  "port": 9000,
+  "replication_factor": 2,
+  "block_size": 4194304,
+  "file_metadata": {
+    "\u53c2\u8003\u6587\u672c.pdf": {
+      "size": 720157,
+      "blocks": [
+        {
+          "servers": [
+            "localhost:9002",
+            "localhost:9001"
+          ],
+          "block_id": "\u53c2\u8003\u6587\u672c.pdf_block_0_f19f0b6a",
+          "size": 720157
+        }
+      ],
+      "created_time": 1742741313.6796196,
+      "modified_time": 1742741313.6796196
+    }
+  },
+  "data_servers": [
+    "localhost:9001",
+    "localhost:9002"
+  ]
+}
