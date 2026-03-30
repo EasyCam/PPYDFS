@@ -175,3 +175,7 @@ cython_debug/
 /patent
 .DS_Store
 AGENTS.md
+article/Article_CN.md
+/article
+/benchmark
+*.json

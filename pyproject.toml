@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppydfs"
+version = "1.1.0"
+description = "Python Parallel Distributed File System (PPYDFS)"
+readme = "README.md"
+license = {text = "GPL-3.0"}
+authors = [
+    {name = "cycleuser", email = "cycleuser@cycleuser.org"}
+]
+homepage = "http://blog.cycleuser.org"
+requires-python = ">=3.9"
+dependencies = ["pywebio"]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+    "pytest>=7.0.0",
+]
+
+[project.urls]
+Homepage = "http://blog.cycleuser.org"
+Repository = "https://github.com/cycleuser/PPYDFS"
+
+[project.scripts]
+ppydfs = "ppydfs.__main__:main"
+
+[tool.setuptools]
+packages = ["ppydfs"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "D", "UP", "YTT", "ANN", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "ISC", "ICN", "G", "INP", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SIM", "TID", "TCH", "ARG", "PTH", "ERA", "PD", "PGH", "PL", "TRY", "RUF"]
+ignore = ["D100", "D101", "D102", "D103", "D104", "D105", "D107", "D203", "D212", "ANN101", "ANN102", "ANN401", "PLR0913", "PLR2004"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_defs = false
